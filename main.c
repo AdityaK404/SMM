@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <time.h>
 #include "smm.h"
 
 int main(void){
@@ -27,6 +32,10 @@ int main(void){
             case 10: ui_send_message(&app); break;
             case 11: ui_process_message(&app); break;
             case 12: ui_show_messages(&app); break;
+            case 13: ui_admin_register(&app); break;
+            case 14: ui_admin_login(&app); break;
+            case 15: ui_admin_logout(&app); break;
+            case 16: ui_admin_change_limits(&app); break;
             case 0: 
                 app_free(&app); 
                 puts("Bye!");
